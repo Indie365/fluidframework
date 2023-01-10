@@ -68,6 +68,7 @@ stages:
           testWorkspace: ${{ variables.testWorkspace }}
           testCommand: start:westus2
           downloadAzureTestArtifacts: true
+          artifactBuildId: $(resources.pipeline.azure.runID)
           env:
             FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
             azure__fluid__relay__service__tenantId: $(fluid-afr-perf-test-westus2-tenantId)
@@ -84,6 +85,7 @@ stages:
           testWorkspace: ${{ variables.testWorkspace }}
           testCommand: start:westus3
           downloadAzureTestArtifacts: true
+          artifactBuildId: $(resources.pipeline.azure.runID)
           env:
             FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
             azure__fluid__relay__service__tenantId: $(fluid-afr-perf-test-westus3-tenantId)
@@ -100,6 +102,7 @@ stages:
           testWorkspace: ${{ variables.testWorkspace }}
           testCommand: start:eastus
           downloadAzureTestArtifacts: true
+          artifactBuildId: $(resources.pipeline.azure.runID)
           env:
             FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
             azure__fluid__relay__service__tenantId: $(fluid-afr-perf-test-eastus-tenantId)
@@ -116,6 +119,7 @@ stages:
           testWorkspace: ${{ variables.testWorkspace }}
           testCommand: start:westeurope
           downloadAzureTestArtifacts: true
+          artifactBuildId: $(resources.pipeline.azure.runID)
           env:
             FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
             azure__fluid__relay__service__tenantId: $(fluid-afr-perf-test-westeurope-tenantId)
