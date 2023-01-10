@@ -51,6 +51,7 @@ resources:
 
 variables:
   - group: prague-key-vault
+  - group: fluid-afr-perf-test-keys
   - name: testWorkspace
     value: $(Pipeline.Workspace)/test
 
